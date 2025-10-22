@@ -1,7 +1,7 @@
 /*
 import { Button } from "@/components/ui/button";
 */
-// import TypewriterEffect from "./TypewriterEffect";
+import TypewriterEffect from "../components/Typewriter.tsx";
 import FloatingIcons from "../components/FloatingIcons.tsx";
 /*
 import { ArrowDownTrayIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
@@ -10,14 +10,13 @@ import { ArrowDownTrayIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 import profileImage from "@/assets/profile.jpg";
 */
 
-/*const roles = [
-  "Frontend Developer",
-  "Spring Developer",
-  "Full Stack Engineer",
-  "React Specialist",
-  "Backend Developer",
-];*/
-
+const roles = [
+  "Data Science Enthusiast",
+  "Building Smart Systems",
+  "Exploring Machine Learning",
+  "Full Stack Developer",
+  "Turning Data into Insights",
+];
 export default function HeroSection() {
 /*  const handleDownloadCV = () => {
     // In production, this would link to your actual CV file
@@ -51,7 +50,7 @@ export default function HeroSection() {
                 <h1 className="text-4xl md:text-6xl lg:text-5xl font-bold text-foreground">
                   Dilan Liyanaarachchi
                 </h1>
-               {/* <TypewriterEffect roles={roles} />*/}
+                <TypewriterEffect roles={roles} />
               </div>
 
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
