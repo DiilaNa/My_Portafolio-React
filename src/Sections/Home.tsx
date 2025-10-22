@@ -2,9 +2,7 @@ import { Button } from "../components/Button.tsx";
 import TypewriterEffect from "../components/Typewriter.tsx";
 import FloatingIcons from "../components/FloatingIcons.tsx";
 import { ArrowDownTrayIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
-/*
-import profileImage from "@/assets/profile.jpg";
-*/
+import profileImage from "../assets/Profile.jpg";
 
 const roles = [
   "Data Science Enthusiast",
@@ -15,7 +13,6 @@ const roles = [
 ];
 export default function HeroSection() {
   const handleDownloadCV = () => {
-    // In production, this would link to your actual CV file
     window.open("/cv.pdf", "_blank");
   };
 
@@ -103,7 +100,7 @@ export default function HeroSection() {
                 {/* Image container */}
                 <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl">
                   <img
-                      src={""}
+                      src={profileImage}
                       alt="Profile"
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                   />
