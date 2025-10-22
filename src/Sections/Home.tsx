@@ -1,11 +1,7 @@
-/*
-import { Button } from "@/components/ui/button";
-*/
+import { Button } from "../components/Button.tsx";
 import TypewriterEffect from "../components/Typewriter.tsx";
 import FloatingIcons from "../components/FloatingIcons.tsx";
-/*
 import { ArrowDownTrayIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
-*/
 /*
 import profileImage from "@/assets/profile.jpg";
 */
@@ -18,14 +14,14 @@ const roles = [
   "Turning Data into Insights",
 ];
 export default function HeroSection() {
-/*  const handleDownloadCV = () => {
+  const handleDownloadCV = () => {
     // In production, this would link to your actual CV file
     window.open("/cv.pdf", "_blank");
   };
 
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  };*/
+  };
 
   return (
       <section
@@ -61,7 +57,7 @@ export default function HeroSection() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-               {/* <Button
+                <Button
                     size="lg"
                     variant="hero"
                     onClick={scrollToContact}
@@ -78,7 +74,7 @@ export default function HeroSection() {
                 >
                   <ArrowDownTrayIcon className="w-5 h-5 mr-2" />
                   Download CV
-                </Button>*/}
+                </Button>
               </div>
 
               {/* Stats */}
