@@ -2,6 +2,7 @@ import './App.css'
 import NavBar from './Sections/NavBar.tsx'
 import Home from './Sections/Home'
 import AboutSection from "./Sections/AboutSection.tsx";
+import ProjectsSection from "./Sections/ProjectsSection.tsx";
 
 const App:React.FC=() => {
 
@@ -11,6 +12,7 @@ const App:React.FC=() => {
         <NavBar />
         <Home />
         <AboutSection />
+        <ProjectsSection />
     </div>
   )
 }

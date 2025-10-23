@@ -1,62 +1,97 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/Card.tsx";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { SiReact, SiSpringboot, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiTailwindcss, SiNodedotjs, SiMongodb, SiPostgresql } from "react-icons/si";
+import { Button } from "../components/Button.tsx";
+import { Badge } from "../components/Badge.tsx";
+import { SiReact, SiSpringboot, SiHtml5, SiCss3, SiJavascript, SiTypescript,/* SiTailwindcss,*/ /*SiNodedotjs,*/ SiMongodb,SiMysql , } from "react-icons/si";
 import { Github, ExternalLink } from "lucide-react";
+import { FaJava } from "react-icons/fa";
+import { SiHibernate} from "react-icons/si";
+import needitdone from "../assets/Homepage.png"
+import bookme from "../assets/Bookme.png"
+import mentalhealth from  "../assets/MentalHealthCenter.png"
+import petcarecenter from  "../assets/PerCareCenter.png"
+import poss from "../assets/pos.webp"
+import portfolio from  "../assets/portfolio.png"
 
 const projects = [
     {
         id: 1,
-        title: "E-Commerce Platform",
-        description: "Full-stack e-commerce application with user authentication, product management, and payment integration.",
-        image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop",
+        title: "NeedItDone – Home Service Hiring Platform",
+        description: "This is a web-based platform that allows homeowners to post jobs,while workers can browse and apply for job opportunities.." ,
+        image: needitdone,
         technologies: [
-            { name: "React", icon: SiReact, color: "#61DAFB" },
             { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F" },
-            { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+            { name: "MySql", icon: SiMysql, color: "#0e87dd" },
+            { name: "Javascript", icon: SiJavascript, color: "#dfff00" },
+            { name: "Html", icon: SiHtml5, color: "#ea7a10" },
+            { name: "Css", icon: SiCss3, color: "#0e87dd" },
         ],
-        githubUrl: "https://github.com/yourusername/ecommerce-platform",
-        liveUrl: "https://ecommerce-demo.com",
+        githubUrl: "https://github.com/DiilaNa/NeedItDone-AAD_Final_Project_IJSE.git",
+        liveUrl: "",
     },
     {
         id: 2,
-        title: "Task Management App",
-        description: "Collaborative task management tool with real-time updates and team collaboration features.",
-        image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=500&fit=crop",
+        title: "University event Ticket Booking System",
+        description: "BookMe streamlines campus event ticketing, providing students with a reliable way to attend university events while giving organizers full control over ticket sales.",
+        image: bookme,
         technologies: [
             { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
             { name: "React", icon: SiReact, color: "#61DAFB" },
-            { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+            { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F" },
             { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
         ],
-        githubUrl: "https://github.com/yourusername/task-manager",
-        liveUrl: "https://taskmanager-demo.com",
+        githubUrl: "https://github.com/DiilaNa/BookMe.git",
+        liveUrl: "",
     },
     {
         id: 3,
         title: "Portfolio Website",
         description: "Modern, responsive portfolio website with smooth animations and interactive UI components.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
+        image: portfolio,
         technologies: [
-            { name: "React", icon: SiReact, color: "#61DAFB" },
-            { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
-            { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+            { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
+            { name: "CSS3", icon: SiCss3, color: "#1572B6" },
+            { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
         ],
-        githubUrl: "https://github.com/yourusername/portfolio",
-        liveUrl: "https://yourportfolio.com",
+        githubUrl: "https://github.com/DiilaNa/MyPortafolio.git",
+        liveUrl: "https://diilana.github.io/MyPortafolio/",
     },
     {
         id: 4,
-        title: "Weather Dashboard",
-        description: "Real-time weather application with forecasts, maps, and location-based weather alerts.",
-        image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=500&fit=crop",
+        title: "Point of Sales System",
+        description: "A web-based POS interface developed as part of a course module that demonstrates core sales functionalities such as adding products, calculating totals, and managing temporary data in the browser.",
+        image:poss,
         technologies: [
             { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
             { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
             { name: "CSS3", icon: SiCss3, color: "#1572B6" },
         ],
-        githubUrl: "https://github.com/yourusername/weather-dashboard",
-        liveUrl: "https://weather-demo.com",
+        githubUrl: "https://github.com/DiilaNa/POS_SYSTEM.git",
+        liveUrl: "https://diilana.github.io/POS_SYSTEM/",
+    },
+    {
+        id: 5,
+        title: "Mental Health Care Center",
+        description: "A Standalone desktop application developed as a module work which follows a layered architecture , with Hibernate ORM for seamless database interaction.",
+        image: mentalhealth,
+        technologies: [
+            { name: "JavaFx", icon: FaJava, color: "#F7DF1E" },
+            { name: "MySql", icon: SiMysql, color: "#268ee3" },
+            { name: "Hibernate", icon: SiHibernate, color: "#E34F26" },
+        ],
+        githubUrl: "https://github.com/DiilaNa/Serenity_Mental_Health_Therapy_Center-Hibernate.git",
+        liveUrl: "",
+    },
+    {
+        id: 6,
+        title: "Pet Care Management System",
+        description: "A Standalone application to manage pet records that follows Layered architecture  which completed as my first semester final project",
+        image: petcarecenter,
+        technologies: [
+            { name: "JavaFx", icon:  FaJava, color: "#F7DF1E" },
+            { name: "MySql", icon: SiMysql, color: "#0c93dc" },
+        ],
+        githubUrl: "https://github.com/DiilaNa/IJSE-Final_Project-Layered_Architecture.git",
+        liveUrl: "",
     },
 ];
 
@@ -93,7 +128,7 @@ const ProjectsSection = () => {
 
                             <CardHeader>
                                 <CardTitle className="text-xl sm:text-2xl">{project.title}</CardTitle>
-                                <CardDescription className="text-sm sm:text-base">
+                                <CardDescription className="text-sm sm:text-base ">
                                     {project.description}
                                 </CardDescription>
                             </CardHeader>
@@ -126,6 +161,7 @@ const ProjectsSection = () => {
                                     <Github className="w-4 h-4 mr-2" />
                                     GitHub
                                 </Button>
+                                {project.liveUrl && (
                                 <Button
                                     variant="heroOutline"
                                     size="sm"
@@ -135,6 +171,7 @@ const ProjectsSection = () => {
                                     <ExternalLink className="w-4 h-4 mr-2" />
                                     Live Demo
                                 </Button>
+                                    )}
                             </CardFooter>
                         </Card>
                     ))}
