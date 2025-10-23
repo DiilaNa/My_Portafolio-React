@@ -16,11 +16,14 @@ import {
     SiGithub,
     SiDocker,
     SiNodedotjs,
-    SiFigma,
-    SiPostman,
+    SiPandas,
+    SiNumpy,
+    SiTensorflow,
+    SiJupyter,
+    SiPytorch, SiExpress,
 } from "react-icons/si";
-import { Coffee } from "lucide-react";
-import { Code2, Database, Palette, Wrench } from "lucide-react";
+import { Coffee , Brain} from "lucide-react";
+import { Code2, Database, Wrench } from "lucide-react";
 
 const skillCategories = [
     {
@@ -43,7 +46,7 @@ const skillCategories = [
             { name: "Spring", icon: SiSpring, color: "#6DB33F", level: 82 },
             { name: "Java", icon: Coffee, color: "#007396", level: 88 },
             { name: "Node.js", icon: SiNodedotjs, color: "#339933", level: 75 },
-            { name: "Python", icon: SiPython, color: "#3776AB", level: 70 },
+            { name: "Express.js", icon: SiExpress, color: "#3776AB", level: 70 },
         ],
     },
     {
@@ -51,7 +54,7 @@ const skillCategories = [
         icon: Wrench,
         skills: [
             { name: "MySQL", icon: SiMysql, color: "#4479A1", level: 85 },
-            { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1", level: 80 },
+            { name: "PostgresSQL", icon: SiPostgresql, color: "#4169E1", level: 80 },
             { name: "MongoDB", icon: SiMongodb, color: "#47A248", level: 75 },
             { name: "Git", icon: SiGit, color: "#F05032", level: 90 },
             { name: "GitHub", icon: SiGithub, color: "#181717", level: 88 },
@@ -59,11 +62,15 @@ const skillCategories = [
         ],
     },
     {
-        title: "Design & Others",
-        icon: Palette,
+        title: "Data Science & Machine Learning",
+        icon: Brain,
         skills: [
-            { name: "Figma", icon: SiFigma, color: "#F24E1E", level: 75 },
-            { name: "Postman", icon: SiPostman, color: "#FF6C37", level: 85 },
+            { name: "Python", icon: SiPython, color: "#3776AB", level: 90 },
+            { name: "Pandas", icon: SiPandas, color: "#150458", level: 65 },
+            { name: "NumPy", icon: SiNumpy, color: "#013243", level: 60 },
+            { name: "TensorFlow", icon: SiTensorflow, color: "#FF6F00", level: 50 },
+            { name: "PyTorch", icon: SiPytorch, color: "#EE4C2C", level: 65 },
+            { name: "Jupyter Notebook", icon: SiJupyter, color: "#F37626", level: 85 },
         ],
     },
 ];
@@ -140,34 +147,6 @@ const SkillsSection = () => {
                             </Card>
                         );
                     })}
-                </div>
-
-                {/* Overall Stats */}
-                <div className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-                    <Card className="bg-card/30 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300">
-                        <CardContent className="p-4 sm:p-6 text-center">
-                            <div className="text-3xl sm:text-4xl font-bold text-gradient mb-2">20+</div>
-                            <div className="text-xs sm:text-sm text-muted-foreground">Technologies</div>
-                        </CardContent>
-                    </Card>
-                    <Card className="bg-card/30 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300">
-                        <CardContent className="p-4 sm:p-6 text-center">
-                            <div className="text-3xl sm:text-4xl font-bold text-gradient mb-2">4+</div>
-                            <div className="text-xs sm:text-sm text-muted-foreground">Years Experience</div>
-                        </CardContent>
-                    </Card>
-                    <Card className="bg-card/30 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300">
-                        <CardContent className="p-4 sm:p-6 text-center">
-                            <div className="text-3xl sm:text-4xl font-bold text-gradient mb-2">50+</div>
-                            <div className="text-xs sm:text-sm text-muted-foreground">Projects Built</div>
-                        </CardContent>
-                    </Card>
-                    <Card className="bg-card/30 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300">
-                        <CardContent className="p-4 sm:p-6 text-center">
-                            <div className="text-3xl sm:text-4xl font-bold text-gradient mb-2">100%</div>
-                            <div className="text-xs sm:text-sm text-muted-foreground">Client Satisfaction</div>
-                        </CardContent>
-                    </Card>
                 </div>
             </div>
         </section>

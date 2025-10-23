@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/Card.tsx";
 import { Button } from "../components/Button.tsx";
 import { Badge } from "../components/Badge.tsx";
-import { SiReact, SiSpringboot, SiHtml5, SiCss3, SiJavascript, SiTypescript,/* SiTailwindcss,*/ /*SiNodedotjs,*/ SiMongodb,SiMysql , } from "react-icons/si";
+import { SiReact, SiSpringboot, SiHtml5, SiCss3, SiJavascript, SiTypescript,SiNodedotjs, SiMongodb,SiMysql , SiSass} from "react-icons/si";
 import { Github, ExternalLink } from "lucide-react";
 import { FaJava } from "react-icons/fa";
 import { SiHibernate} from "react-icons/si";
@@ -16,7 +16,7 @@ const projects = [
     {
         id: 1,
         title: "NeedItDone – Home Service Hiring Platform",
-        description: "This is a web-based platform that allows homeowners to post jobs,while workers can browse and apply for job opportunities.." ,
+        description: "A platform that bridges the gap between homeowners and workers. Post requirements — like finding a painter or electrician — and let nearby professionals apply and get the job done efficiently." ,
         image: needitdone,
         technologies: [
             { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F" },
@@ -38,6 +38,8 @@ const projects = [
             { name: "React", icon: SiReact, color: "#61DAFB" },
             { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F" },
             { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+            { name: "NodeJS", icon: SiNodedotjs, color: "#47A248" },
+            { name: "SASS", icon: SiSass, color: "#ed1ebe" },
         ],
         githubUrl: "https://github.com/DiilaNa/BookMe.git",
         liveUrl: "",
@@ -45,7 +47,7 @@ const projects = [
     {
         id: 3,
         title: "Portfolio Website",
-        description: "Modern, responsive portfolio website with smooth animations and interactive UI components.",
+        description: "Modern, responsive portfolio website with smooth animations and interactive UI components.As a part of my Internet technologies module i have completed this website using html, css knowledge",
         image: portfolio,
         technologies: [
             { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
@@ -58,7 +60,7 @@ const projects = [
     {
         id: 4,
         title: "Point of Sales System",
-        description: "A web-based POS interface developed as part of a course module that demonstrates core sales functionalities such as adding products, calculating totals, and managing temporary data in the browser.",
+        description: "A web-based POS interface developed as part of a module that demonstrates sales functionalities such as adding products, calculating totals, and managing temporary data in the browser.",
         image:poss,
         technologies: [
             { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
