@@ -2,11 +2,12 @@ import { useState } from "react";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input.tsx";
 import { Textarea } from "../components/TextArea.tsx";
-import { Github, Linkedin,Facebook , Instagram ,Mail, Send } from "lucide-react";
+import { Github, Linkedin,Facebook , Instagram ,Mail, Send} from "lucide-react";
 import { useToast } from "../hooks/useToast.ts";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function ContactSection() {
-    const { toast } = useToast();
+    const {toast} = useToast();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -19,17 +20,16 @@ export default function ContactSection() {
             title: "Message Sent!",
             description: "Thank you for reaching out. I'll get back to you soon.",
         });
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({name: "", email: "", message: ""});
     };
 
     const socialLinks = [
-        { icon: Github, href: "https://github.com/DiilaNa", label: "GitHub" },
-        { icon: Linkedin, href: "www.linkedin.com/in/dilan-liyanaarachchi-8a0a01244", label: "LinkedIn" },
-        { icon: Mail, href: "mailto:liyanaarachchidilan@gmail.com", label: "Email" },
-        { icon: Instagram, href: "https://www.instagram.com/dilan_liyanaarachchi?igsh=MjU0YnV5c3ZlZGh0", label: "Instagram" },
-        { icon: Facebook, href: "https://www.facebook.com/share/17YDSNkJHu/", label: "FaceBook" },
-
-
+        {icon: Github, href: "https://github.com/DiilaNa", label: "GitHub"},
+        {icon: Linkedin, href: "https://www.linkedin.com/in/dilan-liyanaarachchi-8a0a01244?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bc%2BK5L1hJRC%2BSL5YbPl3EvQ%3D%3D", label: "LinkedIn"},
+        {icon: Mail, href: "mailto:liyanaarachchidilan@gmail.com", label: "Email"},
+        {icon: Instagram, href: "https://www.instagram.com/dilan_liyanaarachchi?igsh=MjU0YnV5c3ZlZGh0", label: "Instagram"},
+        {icon: Facebook, href: "https://www.facebook.com/share/17YDSNkJHu/", label: "FaceBook"},
+        {icon:FaWhatsapp,href: "https://wa.me/94713804825",label: "Whatsapp"}
     ];
 
     return (
@@ -52,7 +52,8 @@ export default function ContactSection() {
 
                         <div className="grid md:grid-cols-2 gap-8 items-start">
                             {/* Contact Form */}
-                            <div className="backdrop-blur-sm bg-card/50 rounded-2xl p-6 md:p-8 border border-border/50 shadow-lg animate-fade-in">
+                            <div
+                                className="backdrop-blur-sm bg-card/50 rounded-2xl p-6 md:p-8 border border-border/50 shadow-lg animate-fade-in">
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div className="space-y-2">
                                         <Input
@@ -60,7 +61,7 @@ export default function ContactSection() {
                                             placeholder="Your name"
                                             value={formData.name}
                                             onChange={(e) =>
-                                                setFormData({ ...formData, name: e.target.value })
+                                                setFormData({...formData, name: e.target.value})
                                             }
                                             required
                                             className="bg-background/50"
@@ -74,7 +75,7 @@ export default function ContactSection() {
                                             placeholder="your.email@example.com"
                                             value={formData.email}
                                             onChange={(e) =>
-                                                setFormData({ ...formData, email: e.target.value })
+                                                setFormData({...formData, email: e.target.value})
                                             }
                                             required
                                             className="bg-background/50"
@@ -87,7 +88,7 @@ export default function ContactSection() {
                                             placeholder="Your message..."
                                             value={formData.message}
                                             onChange={(e) =>
-                                                setFormData({ ...formData, message: e.target.value })
+                                                setFormData({...formData, message: e.target.value})
                                             }
                                             required
                                             rows={5}
@@ -97,14 +98,15 @@ export default function ContactSection() {
 
                                     <Button type="submit" className="w-full group">
                                         Send Message
-                                        <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                        <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"/>
                                     </Button>
                                 </form>
                             </div>
 
                             {/* Social Links & Info */}
                             <div className="space-y-6 animate-fade-in">
-                                <div className="backdrop-blur-sm bg-card/50 rounded-2xl p-6 md:p-8 border border-border/50 shadow-lg">
+                                <div
+                                    className="backdrop-blur-sm bg-card/50 rounded-2xl p-6 md:p-8 border border-border/50 shadow-lg">
                                     <h3 className="text-2xl font-bold mb-4">Connect With Me</h3>
                                     <p className="text-muted-foreground mb-6">
                                         Follow me on social media or send me an email. I'm always
@@ -120,7 +122,8 @@ export default function ContactSection() {
                                                 rel="noopener noreferrer"
                                                 className="flex items-center gap-3 p-4 rounded-xl bg-background/50 border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group"
                                             >
-                                                <social.icon className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
+                                                <social.icon
+                                                    className="h-5 w-5 text-primary group-hover:scale-110 transition-transform"/>
                                                 <span className="font-medium">{social.label}</span>
                                             </a>
                                         ))}
@@ -150,7 +153,7 @@ export default function ContactSection() {
                                     className="text-muted-foreground hover:text-primary transition-colors"
                                     aria-label={social.label}
                                 >
-                                    <social.icon className="h-5 w-5" />
+                                    <social.icon className="h-5 w-5"/>
                                 </a>
                             ))}
                         </div>
