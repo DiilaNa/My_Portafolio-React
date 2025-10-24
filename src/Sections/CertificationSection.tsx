@@ -45,7 +45,7 @@ const certificates: Certificate[] = [
     {
         id: 4,
         title: "Most Outstanding Performance",
-        issuer: "Esoft Mentro Campus",
+        issuer: "Esoft Metro Campus",
         issueDate: "December 2024",
         certificateLink: esoft,
         image: esoftAward,
