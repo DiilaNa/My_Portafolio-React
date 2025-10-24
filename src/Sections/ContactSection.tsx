@@ -113,21 +113,22 @@ export default function ContactSection() {
                                         open to discussing new projects and opportunities.
                                     </p>
 
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-4">
                                         {socialLinks.map((social) => (
                                             <a
                                                 key={social.label}
                                                 href={social.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-3 p-4 rounded-xl bg-background/50 border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group"
+                                                className="flex flex-col sm:flex-row items-center justify-center gap-2 p-4 rounded-xl bg-background/50 border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group"
                                             >
                                                 <social.icon
-                                                    className="h-5 w-5 text-primary group-hover:scale-110 transition-transform"/>
-                                                <span className="font-medium">{social.label}</span>
+                                                    className="h-6 w-6 text-primary group-hover:scale-110 transition-transform"/>
+                                                <span className="font-medium text-sm hidden sm:inline">{social.label}</span>
                                             </a>
                                         ))}
                                     </div>
+
                                 </div>
                             </div>
                         </div>
