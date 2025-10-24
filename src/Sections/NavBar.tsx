@@ -9,7 +9,9 @@ import profilepic from "../assets/Profile.jpg"
 const navigation = [
   { name: "Home", href: "#home", current: true },
   { name: "About", href: "#about", current: false },
+  { name: "Skills", href: "#skills", current: false },
   { name: "Projects", href: "#projects", current: false },
+  { name: "Gallery", href: "#gallery", current: false },
   { name: "Contact", href: "#contact", current: false },
 ];
 
@@ -26,14 +28,12 @@ export default function NavBar() {
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
 
-            {/* 👇 Left section (Logo or Name placeholder) */}
             <div className="flex items-center">
               <a href="#home" className="text-white text-lg font-semibold tracking-wide">
                <img src={profilepic} className="w-8 h-8 rounded-3xl"/>
               </a>
             </div>
 
-            {/* 👇 Right section (Navigation + Mobile Menu Button) */}
             <div className="flex items-center justify-end flex-1 space-x-4">
 
               {/* Desktop Navigation */}
@@ -54,7 +54,6 @@ export default function NavBar() {
                 ))}
               </div>
 
-              {/* 👇 Mobile Menu Button (moved to right side now) */}
               <div className="flex sm:hidden">
                 <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
                   {/* Hamburger Icon */}
@@ -73,7 +72,6 @@ export default function NavBar() {
           </div>
         </div>
 
-        {/* 👇 Mobile Dropdown Menu */}
         <DisclosurePanel className="sm:hidden">
           <div className="space-y-1 px-2 pt-2 pb-3 bg-gray-900/90 backdrop-blur-md">
             {navigation.map((item) => (
