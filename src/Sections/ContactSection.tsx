@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input.tsx";
 import { Textarea } from "../components/TextArea.tsx";
-import { Label } from "../components/Labels.tsx";
-import { Github, Linkedin, Twitter, Mail, Send } from "lucide-react";
+import { Github, Linkedin,Facebook , Instagram ,Mail, Send } from "lucide-react";
 import { useToast } from "../hooks/useToast.ts";
 
 export default function ContactSection() {
@@ -16,7 +15,6 @@ export default function ContactSection() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission here
         toast({
             title: "Message Sent!",
             description: "Thank you for reaching out. I'll get back to you soon.",
@@ -25,10 +23,13 @@ export default function ContactSection() {
     };
 
     const socialLinks = [
-        { icon: Github, href: "https://github.com/yourusername", label: "GitHub" },
-        { icon: Linkedin, href: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
-        { icon: Twitter, href: "https://twitter.com/yourusername", label: "Twitter" },
-        { icon: Mail, href: "mailto:your.email@example.com", label: "Email" },
+        { icon: Github, href: "https://github.com/DiilaNa", label: "GitHub" },
+        { icon: Linkedin, href: "www.linkedin.com/in/dilan-liyanaarachchi-8a0a01244", label: "LinkedIn" },
+        { icon: Mail, href: "mailto:liyanaarachchidilan@gmail.com", label: "Email" },
+        { icon: Instagram, href: "https://www.instagram.com/dilan_liyanaarachchi?igsh=MjU0YnV5c3ZlZGh0", label: "Instagram" },
+        { icon: Facebook, href: "https://www.facebook.com/share/17YDSNkJHu/", label: "FaceBook" },
+
+
     ];
 
     return (
@@ -54,7 +55,6 @@ export default function ContactSection() {
                             <div className="backdrop-blur-sm bg-card/50 rounded-2xl p-6 md:p-8 border border-border/50 shadow-lg animate-fade-in">
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div className="space-y-2">
-                                        <Label htmlFor="name">Name</Label>
                                         <Input
                                             id="name"
                                             placeholder="Your name"
@@ -68,7 +68,6 @@ export default function ContactSection() {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <Label htmlFor="email">Email</Label>
                                         <Input
                                             id="email"
                                             type="email"
@@ -83,7 +82,6 @@ export default function ContactSection() {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <Label htmlFor="message">Message</Label>
                                         <Textarea
                                             id="message"
                                             placeholder="Your message..."
@@ -128,15 +126,6 @@ export default function ContactSection() {
                                         ))}
                                     </div>
                                 </div>
-
-                                <div className="backdrop-blur-sm bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-6 md:p-8 border border-primary/20">
-                                    <h4 className="text-xl font-bold mb-2">Let's Build Something Amazing</h4>
-                                    <p className="text-sm text-muted-foreground">
-                                        Whether you have a question or just want to chat about
-                                        technology, design, or collaboration opportunities - I'd
-                                        love to hear from you.
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -148,7 +137,7 @@ export default function ContactSection() {
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-sm text-muted-foreground text-center md:text-left">
-                            © {new Date().getFullYear()} Your Name. All rights reserved.
+                            © {new Date().getFullYear()} Dilan Liyanaarachchi. All rights reserved.
                         </p>
 
                         <div className="flex gap-4">
