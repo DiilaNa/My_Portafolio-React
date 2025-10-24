@@ -6,6 +6,7 @@ import ProjectsSection from "./Sections/ProjectsSection.tsx";
 import SkillsSection from "./Sections/SkillsSection.tsx";
 import Certificates from "./Sections/CertificationSection.tsx";
 import GallerySection from "./Sections/GalllerySection.tsx";
+import ContactSection from "./Sections/ContactSection.tsx";
 
 const App:React.FC=() => {
 
@@ -19,6 +20,7 @@ const App:React.FC=() => {
         <ProjectsSection />
         <Certificates />
         <GallerySection />
+        <ContactSection />
     </div>
   )
 }
